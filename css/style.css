@@ -856,8 +856,29 @@ video {
   max-width: 300px;
 }
 
+.break-before-all {
+  -moz-column-break-before: all;
+       break-before: all;
+}
+
+.grid-flow-row {
+  grid-auto-flow: row;
+}
+
+.grid-flow-col {
+  grid-auto-flow: column;
+}
+
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-rows-5 {
+  grid-template-rows: repeat(5, minmax(0, 1fr));
+}
+
+.grid-rows-4 {
+  grid-template-rows: repeat(4, minmax(0, 1fr));
 }
 
 .flex-col {
@@ -866,6 +887,10 @@ video {
 
 .flex-wrap {
   flex-wrap: wrap;
+}
+
+.items-end {
+  align-items: flex-end;
 }
 
 .items-center {
@@ -1185,8 +1210,27 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.text-gray-400 {
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity));
+}
+
 .underline {
   text-decoration-line: underline;
+}
+
+.hover\:text-yellow-500:hover {
+  --tw-text-opacity: 1;
+  color: rgb(234 179 8 / var(--tw-text-opacity));
+}
+
+.hover\:text-\[\#\#FED100\]:hover {
+  color: ##FED100;
+}
+
+.hover\:text-\[\#FED100\]:hover {
+  --tw-text-opacity: 1;
+  color: rgb(254 209 0 / var(--tw-text-opacity));
 }
 
 .group:hover .group-hover\:text-red-700 {
@@ -1465,6 +1509,14 @@ video {
 
   .md\:flex-row {
     flex-direction: row;
+  }
+
+  .md\:flex-col {
+    flex-direction: column;
+  }
+
+  .md\:items-end {
+    align-items: flex-end;
   }
 
   .md\:justify-start {
